@@ -1,2 +1,2 @@
 # monkscrolls
-Social diary application built on top of Monkshu server.
+Social diary application built on top of the Monkshu server.
