@@ -15,18 +15,17 @@ function doService(jsonReq, callback) {
 	noteJSON.ts = jsonReq.ts;
 	noteJSON = JSON.stringify(noteJSON);
 	
-	var userdbPath = 
-		require(CONSTANTS.LIBDIR+"/userid.js").getUserPath(jsonReq.id);
-		
-	var filePath = userdbPath + "/" + jsonReq.ts + APP_CONSTANTS.NOTE_EXT;
-		
-	fs.writeFile(filePath, noteJSON, function(err) {
-		if (err) {
-			var resp = {}; resp["result"] = false; resp["reason"] = err;
-			callback(resp);
-		} else {
-			var resp = {}; resp["result"] = true;
-			callback(resp);
-		}
+	require(CONSTANTS.LIBDIR+"/userid.js").getUserPath(jsonReq.id, function(userdbPath) {
+		var filePath = userdbPath + "/" + jsonReq.ts + APP_CONSTANTS.NOTE_EXT;
+			
+		fs.writeFile(filePath, noteJSON, function(err) {
+			if (err) {
+				var resp = {}; resp["result"] = false; resp["reason"] = err;
+				callback(resp);
+			} else {
+				var resp = {}; resp["result"] = true;
+				callback(resp);
+			}
+		});
 	});
 }

@@ -16,9 +16,12 @@ if ( typeof String.prototype.endsWith != 'function' ) {
 exports.doService = doService;
 
 function doService(jsonReq, callback) {
-	var userdbPath = 
-		require(CONSTANTS.LIBDIR+"/userid.js").getUserPath(jsonReq.id);
-		
+	require(CONSTANTS.LIBDIR+"/userid.js").getUserPath(jsonReq.id, function(userdbPath) {
+		doWork(jsonReq, callback, userdbPath);
+	});
+}
+
+function doWork(jsonReq, callback, userdbPath) {
 	var resp = {};
 	resp["result"] = true;
 	
