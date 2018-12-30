@@ -1,0 +1,42 @@
+<!-- 
+(C) 2015 TekMonks. All rights reserved.
+License: GPL2 - see enclosed license.txt file.
+-->
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+	
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/addnote.css">
+	<script type="module">import {addnote} from "./js/addnote.mjs"; window.addnote = addnote; addnote.init();</script>	
+	
+	<title>{{i18n.Title}}</title>
+</head>
+
+<body>
+
+<div id="navbar">
+	<span id="navitemlefttight" onclick="addnote.doNavAddMain()"><img src="./img/back.png"></span>
+	<span id="navitemleft" onclick="addnote.doNavAddMain()">{{i18n.Back}}</span>
+	<span id="navitemleftgap"></span>
+	<span id="navitemleft" onclick="addnote.doSaveNote()"><img src="./img/save.png"></span>
+	<span id="navitemleft" onclick="addnote.doSaveNote()">{{i18n.Save}}</span>
+	<span id="navitemright" onclick="addnote.logout()">{{i18n.Logout}}</span>
+</div>
+
+<div class="maincontent">
+	<div class="titlebox">
+		<input type="text" id="title" placeholder="{{i18n.NoteTitle}}"></input>
+	</div>
+	
+	<div class="notebox">
+		<textarea id="note" placeholder="{{i18n.NoteContent}}"></textarea>
+	</div>
+</div>
+
+</body>
+</html>

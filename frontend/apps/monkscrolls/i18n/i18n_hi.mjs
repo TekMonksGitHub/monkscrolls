@@ -1,0 +1,22 @@
+export const i18n = {
+"Title" : "मोंकशु डायरीयां",
+"Logout" : "बाहर निकलें",
+"Back" : "वापस",
+"Save" : "सुरक्षित कीजिये",
+"AddNote" : "नोट जोड़े",
+"ViewNotes" : "नोट देखें",
+"NoteTitle" : "शीर्षक लिखें",
+"NoteContent" : "रचना लिखें",
+"Saved" : "सहेजा",
+"NotSaved" : "नहीं सहेजा",
+"Deleted" : "मिटाया",
+"ErrorDeleting" : "नहीं मिटाया",
+"UserID" : "आपकी आईडी",
+"DesiredUserID" : "नई आईडी",
+"Password" : "पासवर्ड",
+"SignIn" : "लॉग इन करें",
+"BadLogin" : "गलत लॉग इन",
+"Register" : "रजिस्टर करें",
+"LoginTaken" : "आईडी उपलब्ध नहीं,कुछ और चुनें",
+"PasswordTooShort" : "पासवर्ड बहुत छोटा है"
+}

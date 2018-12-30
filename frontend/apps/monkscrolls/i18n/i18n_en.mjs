@@ -1,0 +1,22 @@
+export const i18n = {
+"Title" : "Monkshu Diaries",
+"Logout" : "Logout",
+"Back" : "Back",
+"Save" : "Save",
+"AddNote" : "Add Note",
+"ViewNotes" : "View Notes",
+"NoteTitle" : "Type Title",
+"NoteContent" : "Type Content",
+"Saved" : "Saved",
+"NotSaved" : "Not Saved",
+"Deleted" : "Deleted",
+"ErrorDeleting" : "Error Deleting",
+"UserID" : "User ID",
+"DesiredUserID" : "Desired User ID",
+"Password" : "Password",
+"SignIn" : "Sign In",
+"BadLogin" : "Incorrect Login",
+"Register" : "Register",
+"LoginTaken" : "Login ID taken",
+"PasswordTooShort" : "Password too short"
+}

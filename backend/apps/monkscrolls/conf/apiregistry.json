@@ -1,0 +1,8 @@
+{
+    "/login" : "/apis/login.js?get=true",
+    "/register" : "/apis/register.js",
+    "/savenote" : "/apis/savenote.js",
+    "/viewnotes" : "/apis/getnotes.js?get=true",
+    "/getnote" : "/apis/getnote.js?get=true",
+    "/deletenote" : "/apis/deletenote.js"
+}

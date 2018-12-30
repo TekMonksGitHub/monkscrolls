@@ -1,0 +1,22 @@
+export const i18n = {
+"Title" : "モンクシュー日記",
+"Logout" : "ログアウト",
+"Back" : "バック",
+"Save" : "除いて",
+"AddNote" : "メモを追加",
+"ViewNotes" : "ビューノート",
+"NoteTitle" : "タイプタイトル",
+"NoteContent" : "型ノート",
+"Saved" : "保存されました",
+"NotSaved" : "保存されません",
+"Deleted" : "削除",
+"ErrorDeleting" : "削除されていません",
+"UserID" : "ログイン",
+"DesiredUserID" : "新しいログイン",
+"Password" : "パスワード",
+"SignIn" : "ログイン",
+"BadLogin" : "不正なログイン",
+"Register" : "登録",
+"LoginTaken" : "ログイン重複",
+"PasswordTooShort" : "パスワードが短すぎます"
+}
