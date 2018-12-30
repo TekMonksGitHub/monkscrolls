@@ -25,7 +25,7 @@ async function init() {
 
 function doNavAddMain() {
 	session.remove(APP_CONSTANTS.SESSION_NOTE_ID);
-	router.loadPage(APP_CONSTANTS.MAIN_THTML, session.get(APP_CONSTANTS.LANG_ID));
+	router.loadPage(APP_CONSTANTS.MAIN_THTML);
 }
 
 async function doSaveNote() {

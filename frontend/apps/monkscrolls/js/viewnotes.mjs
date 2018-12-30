@@ -13,7 +13,7 @@ import {i18n} from "/framework/js/i18n.mjs";
 
 function viewNote(ts) {
 	session.set(APP_CONSTANTS.SESSION_NOTE_ID,ts);
-	router.loadPage(APP_CONSTANTS.ADDNOTE_THTML, session.get(APP_CONSTANTS.LANG_ID));
+	router.loadPage(APP_CONSTANTS.ADDNOTE_THTML);
 }
 
 async function deleteNote(ts) {
@@ -35,7 +35,7 @@ async function deleteNote(ts) {
 
 function doNavViewMain() {
 	session.remove(APP_CONSTANTS.SESSION_NOTE_ID);
-	router.loadPage(APP_CONSTANTS.MAIN_THTML, session.get(APP_CONSTANTS.LANG_ID));
+	router.loadPage(APP_CONSTANTS.MAIN_THTML);
 }
 
 function logout() {loginmanager.logout()}

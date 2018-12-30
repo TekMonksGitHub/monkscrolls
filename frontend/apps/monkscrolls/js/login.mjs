@@ -26,19 +26,19 @@ async function register() {
 	
 	await $$.importPlugin(`${APP_CONSTANTS.APP_PATH}/js/util.js`);
 	let regpass = $$.util.elID("regpass").value;
-	if (regpass.length < APP_CONSTANTS.N_MIN_PASS_LENGTH) handleRegistrationResult(false,true);
+	if (regpass.length < APP_CONSTANTS.MIN_PASS_LENGTH) handleRegistrationResult(false,true);
 	else handleRegistrationResult(await loginmanager.register($$.util.elID("regid").value, regpass));
 }
 
 function changeLanguage(lang) {
-	router.reload(lang); 
 	session.set(APP_CONSTANTS.LANG_ID, lang);
+	router.reload(); 
 }
 
 function handleLoginResult(result) {
 	if (result) {
 		deregisterClickHandlers();
-		router.loadPage(APP_CONSTANTS.MAIN_THTML, session.get(APP_CONSTANTS.LANG_ID));
+		router.loadPage(APP_CONSTANTS.MAIN_THTML);
 	} else {
 		$$.util.elID("divsigninerror").style.visibility = "visible";
 
@@ -50,7 +50,7 @@ function handleLoginResult(result) {
 function handleRegistrationResult(result, passtooshort) {
 	if (result) {
 		deregisterClickHandlers();
-		router.loadPage(APP_CONSTANTS.MAIN_THTML, session.get(APP_CONSTANTS.LANG_ID));
+		router.loadPage(APP_CONSTANTS.MAIN_THTML);
 	} else {
 		if (passtooshort) {
 			$$.util.elID("registererror_pass").style.visibility = "visible";

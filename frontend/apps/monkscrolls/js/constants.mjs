@@ -8,7 +8,6 @@ const APP_PATH = `${FRONTEND}/apps/monkscrolls`;
 
 export const APP_CONSTANTS = {
     FRONTEND, BACKEND, APP_PATH,
-    INDEX_THTML: APP_PATH+"/login.html",
     MAIN_THTML: APP_PATH+"/main.html",
     ADDNOTE_THTML: APP_PATH+"/addnote.html",
     VIEWNOTES_THTML: APP_PATH+"/viewnotes.html",
@@ -24,7 +23,7 @@ export const APP_CONSTANTS = {
     LANG_ID: "com_monkshu_dairy_lang",
 
     // Login constants
-    N_MIN_PASS_LENGTH: 8,
+    MIN_PASS_LENGTH: 8,
     NEEDS_LOGIN: true,
     SUPPORTS_REGISTRATION: true,
     API_LOGIN: BACKEND+"/login",
