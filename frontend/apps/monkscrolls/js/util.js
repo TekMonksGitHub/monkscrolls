@@ -27,7 +27,7 @@ export const getElementsByClassName = (theClass,node) => {
 }
 
 export const elID = id => {
-    return document.getElementById(id);
+    return document.querySelector(`#${id}`);
 }
 
 export const fade = (element, callback) => {

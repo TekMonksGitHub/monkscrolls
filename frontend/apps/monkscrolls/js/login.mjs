@@ -31,7 +31,7 @@ async function register() {
 }
 
 function changeLanguage(lang) {
-	session.set(APP_CONSTANTS.LANG_ID, lang);
+	session.set($$.MONKSHU_CONSTANTS.LANG_ID, lang);
 	router.reload(); 
 }
 

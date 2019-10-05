@@ -29,5 +29,13 @@ export const APP_CONSTANTS = {
     API_LOGIN: BACKEND+"/login",
     API_REGISTER: BACKEND+"/register",
     BCRYPT_SALT: "$2a$10$VFyiln/PpFyZc.ABoi4ppf",
-    USERID: "id"
+    USERID: "id",
+
+    // security settings
+    USER_ROLE: "user",
+    GUEST_ROLE: "guest",
+    PERMISSIONS_MAP: {
+        user:[APP_PATH+"/main.html", APP_PATH+"/login.html", APP_PATH+"/addnote.html", APP_PATH+"/viewnotes.html", $$.MONKSHU_CONSTANTS.ERROR_HTML], 
+        guest:[APP_PATH+"/login.html", $$.MONKSHU_CONSTANTS.ERROR_HTML]
+    }
 }
